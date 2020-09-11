@@ -1,4 +1,4 @@
-package com.mulutu.gadsprojectone;
+package com.mulutu.thephoenix;
 
 import android.content.Intent;
 import android.graphics.Color;

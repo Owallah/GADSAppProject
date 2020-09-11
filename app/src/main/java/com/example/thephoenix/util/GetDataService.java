@@ -1,8 +1,8 @@
-package com.mulutu.gadsprojectone.util;
+package com.mulutu.thephoenix.util;
 
-import com.mulutu.gadsprojectone.PostResponse;
-import com.mulutu.gadsprojectone.model.LearnerHours;
-import com.mulutu.gadsprojectone.model.LearnerIQ;
+import com.mulutu.thephoenix.PostResponse;
+import com.mulutu.thephoenix.model.LearnerHours;
+import com.mulutu.thephoenix.model.LearnerIQ;
 
 import java.util.List;
 import java.util.Map;

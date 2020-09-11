@@ -1,23 +1,18 @@
-package com.mulutu.gadsprojectone;
+package com.mulutu.thephoenix;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-import com.mulutu.gadsprojectone.adaptar.ViewPagerAdapter;
+import com.mulutu.thephoenix.adaptar.ViewPagerAdapter;
 
 
 public class MainActivity extends AppCompatActivity {

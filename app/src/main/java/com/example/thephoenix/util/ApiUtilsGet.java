@@ -1,4 +1,4 @@
-package com.mulutu.gadsprojectone.util;
+package com.mulutu.thephoenix.util;
 
 public class ApiUtilsGet {
     private ApiUtilsGet() {}

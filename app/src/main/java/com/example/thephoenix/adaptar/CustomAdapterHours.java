@@ -1,4 +1,4 @@
-package com.mulutu.gadsprojectone.adaptar;
+package com.example.thephoenix.adaptar;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,21 +10,19 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.jakewharton.picasso.OkHttp3Downloader;
-import com.mulutu.gadsprojectone.R;
-import com.mulutu.gadsprojectone.model.LearnerHours;
-import com.mulutu.gadsprojectone.model.LearnerIQ;
+import com.mulutu.thephoenix.R;
+import com.mulutu.thephoenix.model.LearnerHours;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class CustomAdapterIQ extends RecyclerView.Adapter<CustomAdapterIQ.CustomViewHolder> {
-    private List<LearnerIQ> learnersListIQ;
+public class CustomAdapterHours extends RecyclerView.Adapter<CustomAdapterHours.CustomViewHolder> {
+    private List<LearnerHours> learnersListHours;
     private Context context;
 
-
-    public CustomAdapterIQ(Context context, List<LearnerIQ> dataList) {
+    public CustomAdapterHours(Context context, List<LearnerHours> dataList) {
         this.context = context;
-        this.learnersListIQ = dataList;
+        this.learnersListHours = dataList;
     }
 
     @Override
@@ -37,12 +35,12 @@ public class CustomAdapterIQ extends RecyclerView.Adapter<CustomAdapterIQ.Custom
     @Override
     public void onBindViewHolder(CustomViewHolder holder, int position) {
 
-        holder.txtLearnerName.setText(learnersListIQ.get(position).getName());
-        holder.txtLeanerDetails.setText(learnersListIQ.get(position).getScore() + " skill IQ score, " + learnersListIQ.get(position).getCountry());
+        holder.txtLearnerName.setText(learnersListHours.get(position).getName());
+        holder.txtLeanerDetails.setText(learnersListHours.get(position).getHours() + " learning hours, " + learnersListHours.get(position).getCountry());
 
         Picasso.Builder builder = new Picasso.Builder(context);
         builder.downloader(new OkHttp3Downloader(context));
-        builder.build().load(learnersListIQ.get(position).getBadgeUrl())
+        builder.build().load(learnersListHours.get(position).getBadgeUrl())
                 .placeholder((R.drawable.ic_launcher_background))
                 .error(R.drawable.ic_launcher_background)
                 .into(holder.badgeID);
@@ -51,7 +49,7 @@ public class CustomAdapterIQ extends RecyclerView.Adapter<CustomAdapterIQ.Custom
 
     @Override
     public int getItemCount() {
-        return learnersListIQ.size();
+        return learnersListHours.size();
     }
 
     class CustomViewHolder extends RecyclerView.ViewHolder {

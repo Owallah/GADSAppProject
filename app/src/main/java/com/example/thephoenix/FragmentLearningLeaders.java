@@ -1,4 +1,4 @@
-package com.mulutu.gadsprojectone;
+package com.mulutu.thephoenix;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mulutu.gadsprojectone.adaptar.CustomAdapterIQ;
-import com.mulutu.gadsprojectone.model.LearnerIQ;
-import com.mulutu.gadsprojectone.util.ApiUtilsGet;
-import com.mulutu.gadsprojectone.util.GetDataService;
+
+import com.mulutu.thephoenix.model.LearnerHours;
+import com.mulutu.thephoenix.util.ApiUtilsGet;
+import com.mulutu.thephoenix.util.GetDataService;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,13 +25,15 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class FragmentSkillIQLeaders extends Fragment {
+public class FragmentLearningLeaders extends Fragment {
+
+    private final String TAG = getClass().getSimpleName();
 
     private ViewGroup root;
     private ProgressDialog progressDialog;
-    private CustomAdapterIQ skillAdapter;
+    private com.example.thephoenix.adaptar.CustomAdapterHours learnerAdapter;
     private RecyclerView recyclerView;
-    private List<LearnerIQ> studentList = new ArrayList<>();
+    private List<LearnerHours> studentList = new ArrayList<>();
 
     private GetDataService getDataService;
 
@@ -54,22 +56,22 @@ public class FragmentSkillIQLeaders extends Fragment {
         progressDialog.show();
 
         //GetDataService service = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
-        //Call<List<LearnerIQ>> call = service.getTopSkillIQLearners();
-        getDataService.getTopSkillIQLearners().enqueue(new Callback<List<LearnerIQ>>() {
+        //Call<List<LearnerHours>> call = service.getTopHoursLearners();
+        getDataService.getTopHoursLearners().enqueue(new Callback<List<LearnerHours>>() {
             @Override
-            public void onResponse(Call<List<LearnerIQ>> call, Response<List<LearnerIQ>> response) {
+            public void onResponse(Call<List<LearnerHours>> call, Response<List<LearnerHours>> response) {
                 progressDialog.dismiss();
                 studentList = response.body();
-                //Collections.sort(studentList);
                 Collections.sort(studentList, Collections.reverseOrder());
-                for (LearnerIQ learner : studentList) {
-                    learner.setCriteria(1); // skill IQ leader
+                for (LearnerHours learner : studentList) {
+                    learner.setCriteria(2); // learning leader
                 }
+                //Log.d(TAG, ">>>  studentList <<<" + studentList);
                 generateDataList();
             }
 
             @Override
-            public void onFailure(Call<List<LearnerIQ>> call, Throwable t) {
+            public void onFailure(Call<List<LearnerHours>> call, Throwable t) {
                 progressDialog.dismiss();
                 Toast.makeText(getContext(), "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
             }
@@ -78,10 +80,10 @@ public class FragmentSkillIQLeaders extends Fragment {
 
     private void generateDataList() {
         recyclerView = (RecyclerView) root.findViewById(R.id.recycler_view);
-        skillAdapter = new CustomAdapterIQ(getContext(), studentList);
+        learnerAdapter = new com.example.thephoenix.adaptar.CustomAdapterHours(this.getContext(), studentList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(skillAdapter);
+        recyclerView.setAdapter(learnerAdapter);
     }
 
     @Override

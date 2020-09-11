@@ -1,15 +1,15 @@
-package com.mulutu.gadsprojectone.model;
+package com.mulutu.thephoenix.model;
 
-public class LearnerHours implements Comparable< LearnerHours > {
+public class LearnerIQ implements Comparable< LearnerIQ > {
     private String name;
-    private Integer hours;
+    private Integer score;
     private String country;
     private String badgeUrl;
     private Integer criteria; // 1 = IQ,  2 = Hours
 
-    public LearnerHours(String name, Integer hours, String country, String badgeUrl, Integer criteria) {
+    public LearnerIQ(String name, Integer score, String country, String badgeUrl, Integer criteria) {
         this.name = name;
-        this.hours = hours;
+        this.score = score;
         this.country = country;
         this.badgeUrl = badgeUrl;
         this.criteria = criteria;
@@ -23,12 +23,12 @@ public class LearnerHours implements Comparable< LearnerHours > {
         this.name = name;
     }
 
-    public Integer getHours() {
-        return hours;
+    public Integer getScore() {
+        return score;
     }
 
-    public void setHours(Integer hours) {
-        this.hours = hours;
+    public void setScore(Integer score) {
+        this.score = score;
     }
 
     public String getCountry() {
@@ -56,7 +56,7 @@ public class LearnerHours implements Comparable< LearnerHours > {
     }
 
     @Override
-    public int compareTo(LearnerHours o) {
-        return this.getHours().compareTo(o.getHours());
+    public int compareTo(LearnerIQ o) {
+        return this.getScore().compareTo(o.getScore());
     }
 }

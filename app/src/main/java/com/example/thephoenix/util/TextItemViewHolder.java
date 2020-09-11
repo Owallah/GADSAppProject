@@ -1,11 +1,11 @@
-package com.mulutu.gadsprojectone.util;
+package com.mulutu.thephoenix.util;
 
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mulutu.gadsprojectone.R;
+import com.mulutu.thephoenix.R;
 
 public class TextItemViewHolder extends RecyclerView.ViewHolder {
     private TextView textView;

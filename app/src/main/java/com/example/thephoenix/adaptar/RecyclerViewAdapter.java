@@ -1,4 +1,4 @@
-package com.mulutu.gadsprojectone.adaptar;
+package com.mulutu.thephoenix.adaptar;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,8 +6,8 @@ import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mulutu.gadsprojectone.R;
-import com.mulutu.gadsprojectone.util.TextItemViewHolder;
+import com.mulutu.thephoenix.R;
+import com.mulutu.thephoenix.util.TextItemViewHolder;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<TextItemViewHolder> {
 

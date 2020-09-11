@@ -1,7 +1,6 @@
-package com.mulutu.gadsprojectone;
+package com.mulutu.thephoenix;
 
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,8 +16,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.mulutu.gadsprojectone.util.ApiUtilsPost;
-import com.mulutu.gadsprojectone.util.GetDataService;
+import com.mulutu.thephoenix.util.ApiUtilsPost;
+import com.mulutu.thephoenix.util.GetDataService;
 
 import java.util.HashMap;
 import java.util.Map;

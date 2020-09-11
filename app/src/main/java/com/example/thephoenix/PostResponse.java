@@ -1,4 +1,4 @@
-package com.mulutu.gadsprojectone;
+package com.mulutu.thephoenix;
 
 import com.google.gson.annotations.SerializedName;
 
