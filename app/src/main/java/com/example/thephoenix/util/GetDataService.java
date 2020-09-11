@@ -1,8 +1,8 @@
-package com.mulutu.thephoenix.util;
+package com.example.thephoenix.util;
 
-import com.mulutu.thephoenix.PostResponse;
-import com.mulutu.thephoenix.model.LearnerHours;
-import com.mulutu.thephoenix.model.LearnerIQ;
+import com.example.thephoenix.PostResponse;
+import com.example.thephoenix.model.LearnerHours;
+import com.example.thephoenix.model.LearnerIQ;
 
 import java.util.List;
 import java.util.Map;

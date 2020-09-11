@@ -1,4 +1,4 @@
-package com.mulutu.thephoenix.adaptar;
+package com.example.thephoenix.adaptar;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.thephoenix.R;
 import com.jakewharton.picasso.OkHttp3Downloader;
-import com.mulutu.thephoenix.R;
-import com.mulutu.thephoenix.model.LearnerIQ;
+import com.example.thephoenix.model.LearnerIQ;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -42,8 +42,8 @@ public class CustomAdapterIQ extends RecyclerView.Adapter<CustomAdapterIQ.Custom
         Picasso.Builder builder = new Picasso.Builder(context);
         builder.downloader(new OkHttp3Downloader(context));
         builder.build().load(learnersListIQ.get(position).getBadgeUrl())
-                .placeholder((R.drawable.ic_launcher_background))
-                .error(R.drawable.ic_launcher_background)
+                .placeholder((R.drawable.load))
+                .error(R.drawable.image_error_icon_5)
                 .into(holder.badgeID);
 
     }

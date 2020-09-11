@@ -9,9 +9,10 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.thephoenix.R;
 import com.jakewharton.picasso.OkHttp3Downloader;
-import com.mulutu.thephoenix.R;
-import com.mulutu.thephoenix.model.LearnerHours;
+
+import com.example.thephoenix.model.LearnerHours;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -28,7 +29,8 @@ public class CustomAdapterHours extends RecyclerView.Adapter<CustomAdapterHours.
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.custom_row, parent, false);
+        View view = layoutInflater.inflate(
+                R.layout.custom_row, parent, false);
         return new CustomViewHolder(view);
     }
 
@@ -41,8 +43,8 @@ public class CustomAdapterHours extends RecyclerView.Adapter<CustomAdapterHours.
         Picasso.Builder builder = new Picasso.Builder(context);
         builder.downloader(new OkHttp3Downloader(context));
         builder.build().load(learnersListHours.get(position).getBadgeUrl())
-                .placeholder((R.drawable.ic_launcher_background))
-                .error(R.drawable.ic_launcher_background)
+                .placeholder((R.drawable.load))
+                .error(R.drawable.image_error_icon_5)
                 .into(holder.badgeID);
 
     }

@@ -1,4 +1,4 @@
-package com.mulutu.thephoenix;
+package com.example.thephoenix;
 
 import android.graphics.Color;
 import android.os.Build;
@@ -16,8 +16,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.mulutu.thephoenix.util.ApiUtilsPost;
-import com.mulutu.thephoenix.util.GetDataService;
+import com.example.thephoenix.util.ApiUtilsPost;
+import com.example.thephoenix.util.GetDataService;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -36,7 +36,6 @@ public class ProjectSubmitActivity extends AppCompatActivity {
     private EditText _lastName;
     private EditText _email;
     private EditText _githubLink;
-    private Button _btnSubmitFarm;
 
     private GetDataService getDataService;
 
@@ -44,16 +43,16 @@ public class ProjectSubmitActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setFullScreenView();
+        fullScreenView();
 
-        prepareToolbar();
+        getToolbar();
 
         getDataService = ApiUtilsPost.GetDataService();
 
-        prepareView();
+        submitView();
     }
 
-    private void prepareToolbar() {
+    private void getToolbar() {
         setContentView(R.layout.activity_project_submit);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -64,7 +63,7 @@ public class ProjectSubmitActivity extends AppCompatActivity {
         }
     }
 
-    protected void setFullScreenView(){
+    protected void fullScreenView(){
         if(Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
             View decorView = getWindow().getDecorView();
             decorView.setSystemUiVisibility(
@@ -79,16 +78,16 @@ public class ProjectSubmitActivity extends AppCompatActivity {
         }
     }
 
-    private void prepareView() {
-        TextView txt = (TextView) findViewById(R.id.txtProjectSubmission);
-        //txt.setPaintFlags(txt.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+    private void submitView() {
+        TextView textView = (TextView) findViewById(R.id.txtProjectSubmission);
+
 
         _firstName = (EditText) findViewById(R.id.firstName);
         _lastName = (EditText) findViewById(R.id.lastName);
         _email = (EditText) findViewById(R.id.email);
         _githubLink = (EditText) findViewById(R.id.githubLink);
-        _btnSubmitFarm = (Button) findViewById(R.id.btnSubmitFarm);
-        _btnSubmitFarm.setOnClickListener(new View.OnClickListener() {
+        Button submitbtn = (Button) findViewById(R.id.btnSubmitFarm);
+        submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showCustomDecisionDialog();

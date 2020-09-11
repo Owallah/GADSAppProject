@@ -1,4 +1,4 @@
-package com.mulutu.thephoenix;
+package com.example.thephoenix;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,7 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-import com.mulutu.thephoenix.adaptar.ViewPagerAdapter;
+import com.example.thephoenix.adaptar.ViewPagerAdapter;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void openSubmitPage() {
         Intent intent = new Intent(MainActivity.this, ProjectSubmitActivity.class);
-        //intent.putExtra("farmId", farm.getFarmId());
         startActivity(intent);
     }
 
@@ -91,18 +90,4 @@ public class MainActivity extends AppCompatActivity {
 
         viewPagerAdapter.notifyDataSetChanged();
     }
-
-   /* @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    // handle button activities
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        return super.onOptionsItemSelected(item);
-    }*/
-
 }

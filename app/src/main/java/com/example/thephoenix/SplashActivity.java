@@ -1,4 +1,4 @@
-package com.mulutu.thephoenix;
+package com.example.thephoenix;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,10 +9,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * An example full-screen activity that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
- */
+
 public class SplashActivity extends AppCompatActivity {
 
     Handler handler;
@@ -21,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setFullScreenView();
+        fullScreenView();
 
         handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -31,10 +28,10 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 3000);
+        }, 2000);
     }
 
-    protected void setFullScreenView(){
+    protected void fullScreenView(){
         if(Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
             View decorView = getWindow().getDecorView();
             decorView.setSystemUiVisibility(

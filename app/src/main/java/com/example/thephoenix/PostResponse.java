@@ -1,4 +1,4 @@
-package com.mulutu.thephoenix;
+package com.example.thephoenix;
 
 import com.google.gson.annotations.SerializedName;
 

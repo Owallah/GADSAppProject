@@ -1,4 +1,4 @@
-package com.mulutu.thephoenix;
+package com.example.thephoenix;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -13,9 +13,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.mulutu.thephoenix.model.LearnerHours;
-import com.mulutu.thephoenix.util.ApiUtilsGet;
-import com.mulutu.thephoenix.util.GetDataService;
+import com.example.thephoenix.model.LearnerHours;
+import com.example.thephoenix.util.ApiUtilsGet;
+import com.example.thephoenix.util.GetDataService;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -26,8 +26,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class FragmentLearningLeaders extends Fragment {
-
-    private final String TAG = getClass().getSimpleName();
 
     private ViewGroup root;
     private ProgressDialog progressDialog;
@@ -55,8 +53,7 @@ public class FragmentLearningLeaders extends Fragment {
         progressDialog.setMessage("Loading....");
         progressDialog.show();
 
-        //GetDataService service = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
-        //Call<List<LearnerHours>> call = service.getTopHoursLearners();
+
         getDataService.getTopHoursLearners().enqueue(new Callback<List<LearnerHours>>() {
             @Override
             public void onResponse(Call<List<LearnerHours>> call, Response<List<LearnerHours>> response) {
@@ -64,9 +61,8 @@ public class FragmentLearningLeaders extends Fragment {
                 studentList = response.body();
                 Collections.sort(studentList, Collections.reverseOrder());
                 for (LearnerHours learner : studentList) {
-                    learner.setCriteria(2); // learning leader
+                    learner.setCriteria(2);
                 }
-                //Log.d(TAG, ">>>  studentList <<<" + studentList);
                 generateDataList();
             }
 
@@ -89,6 +85,5 @@ public class FragmentLearningLeaders extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        //adapter.notifyDataSetChanged();
     }
 }

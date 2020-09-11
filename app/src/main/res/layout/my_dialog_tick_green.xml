@@ -15,7 +15,8 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_centerInParent="true"
-            android:background="@drawable/ic_tick_green" />
+            android:background="@drawable/ic_tick_green"
+            android:contentDescription="@string/todo" />
 
     </RelativeLayout>
 
@@ -28,27 +29,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Submission Successful"
+            android:text="@string/submission_successful"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
-        <!--TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu erat tincidunt lacus fermentum rutrum."
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" / -->
-
-        <!--Button
-            android:id="@+id/buttonOk"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/button_background"
-            android:text="Ok"
-            android:textColor="@color/colorPrimary" / -->
 
     </LinearLayout>
 

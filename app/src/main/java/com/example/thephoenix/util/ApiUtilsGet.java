@@ -1,4 +1,4 @@
-package com.mulutu.thephoenix.util;
+package com.example.thephoenix.util;
 
 public class ApiUtilsGet {
     private ApiUtilsGet() {}

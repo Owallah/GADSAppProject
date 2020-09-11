@@ -1,4 +1,4 @@
-package com.mulutu.thephoenix.model;
+package com.example.thephoenix.model;
 
 public class LearnerIQ implements Comparable< LearnerIQ > {
     private String name;

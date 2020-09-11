@@ -1,11 +1,11 @@
-package com.mulutu.thephoenix.model;
+package com.example.thephoenix.model;
 
 public class LearnerHours implements Comparable< LearnerHours > {
     private String name;
     private Integer hours;
     private String country;
     private String badgeUrl;
-    private Integer criteria; // 1 = IQ,  2 = Hours
+    private Integer criteria;
 
     public LearnerHours(String name, Integer hours, String country, String badgeUrl, Integer criteria) {
         this.name = name;
@@ -27,28 +27,12 @@ public class LearnerHours implements Comparable< LearnerHours > {
         return hours;
     }
 
-    public void setHours(Integer hours) {
-        this.hours = hours;
-    }
-
     public String getCountry() {
         return country;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
     public String getBadgeUrl() {
         return badgeUrl;
-    }
-
-    public void setBadgeUrl(String badgeUrl) {
-        this.badgeUrl = badgeUrl;
-    }
-
-    public Integer getCriteria() {
-        return criteria;
     }
 
     public void setCriteria(Integer criteria) {

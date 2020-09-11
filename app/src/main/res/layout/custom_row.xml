@@ -15,34 +15,35 @@
             android:id="@+id/badgeID"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/learnerName"
             style="@style/TextAppearance.AppCompat.Medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@+id/badgeID"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/badgeID"
             android:lines="1"
             android:paddingTop="10dp"
-            android:text="title" />
+            android:text="@string/title" />
 
         <TextView
             android:id="@+id/learnerDetails"
             style="@style/TextAppearance.AppCompat.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/badgeID"
+            android:layout_toEndOf="@+id/badgeID"
             android:layout_below="@+id/learnerName"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:paddingTop="5dp"
             android:textColor="#aaaaaa"
             android:lines="1"
-            android:text="title" />
+            android:text="@string/title" />
 
     </RelativeLayout>
 

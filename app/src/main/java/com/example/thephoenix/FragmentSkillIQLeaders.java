@@ -1,4 +1,4 @@
-package com.mulutu.thephoenix;
+package com.example.thephoenix;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mulutu.thephoenix.adaptar.CustomAdapterIQ;
-import com.mulutu.thephoenix.model.LearnerIQ;
-import com.mulutu.thephoenix.util.ApiUtilsGet;
-import com.mulutu.thephoenix.util.GetDataService;
+import com.example.thephoenix.adaptar.CustomAdapterIQ;
+import com.example.thephoenix.model.LearnerIQ;
+import com.example.thephoenix.util.ApiUtilsGet;
+import com.example.thephoenix.util.GetDataService;
 
 import java.util.ArrayList;
 import java.util.Collections;

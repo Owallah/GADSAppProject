@@ -1,11 +1,12 @@
-package com.mulutu.thephoenix.util;
+package com.example.thephoenix.util;
 
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mulutu.thephoenix.R;
+import com.example.thephoenix.R;
+
 
 public class TextItemViewHolder extends RecyclerView.ViewHolder {
     private TextView textView;
